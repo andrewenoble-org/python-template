@@ -1,0 +1,28 @@
+# Byte-compiled 
+__pycache__/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Documentation generated
+docs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# MacOSX 
+.AppleDouble
+.DS_Store
+.LSOverride
+
+# PyCharm
+.idea/
+
+# Temporary
+*.temp*
+.temp/
+
+# VSCode
+.vscode/

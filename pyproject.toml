@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-template"
+version = "0.0.1"
+license = "MIT"
+authors = [
+    {name = "Andrew Noble", email = "andrew.e.noble@gmail.com"},
+]
+description = "Python Template"
+repository = "https://github.com/andrewenoble/python-template"
+readme = "README.rst"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "logging_singleton",
+]
+
+[project.optional-dependencies] # Optional
+dev = [
+    "pre-commit",
+    "pytest",
+]
+test = [
+    "coverage",
+    "pre-commit",
+    "pytest",
+]
+
+[tool.black]
+line-length = 88
+target_version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
