@@ -37,7 +37,7 @@ class PetSound:
     says_str = "A {name} says {sound}"
 
     def __init__(self, name, sound, num_legs=4):
-        """
+        r"""
         Parameters
         ----------
         name : str
@@ -52,7 +52,7 @@ class PetSound:
         self.num_legs = num_legs
 
     def says(self, sound=None):
-        """Prints what the pet name is and what sound it makes.
+        r"""Prints what the pet name is and what sound it makes.
 
         If the argument `sound` is not passed in, the default pet
         sound is used.
