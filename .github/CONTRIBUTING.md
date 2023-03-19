@@ -157,4 +157,3 @@ Updating, improving and correcting the documentation
 <!-- omit in toc -->
 ## Attribution
 This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!
-

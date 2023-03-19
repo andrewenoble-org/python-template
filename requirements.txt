@@ -1,2 +1,2 @@
-pre-commit
 logging_singleton
+pre-commit

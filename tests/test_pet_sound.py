@@ -1,5 +1,5 @@
-from io import StringIO
 from contextlib import redirect_stdout
+from io import StringIO
 
 from python_template.pet_sounds import PetSound
 

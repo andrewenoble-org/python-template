@@ -1,4 +1,4 @@
-# Byte-compiled 
+# Byte-compiled
 __pycache__/
 
 # Distribution / packaging
@@ -12,7 +12,7 @@ docs/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# MacOSX 
+# MacOSX
 .AppleDouble
 .DS_Store
 .LSOverride

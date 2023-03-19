@@ -17,16 +17,16 @@ build:
 	docker build -t python-template .
 
 .PHONY: exec
-exec: 
+exec:
 	docker exec -it python-template /bin/bash
 
 .PHONY: git-config
-git-config: 
+git-config:
 	git config --global user.email "a@b"
 	git config --global user.name "a"
 
 .PHONY: rmi
-rmi: 
+rmi:
 	docker rmi python-template
 
 .PHONY: run

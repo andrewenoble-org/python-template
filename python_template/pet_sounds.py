@@ -1,5 +1,6 @@
 """Class to associate a pet to a sound."""
 
+
 class PetSound:
     r"""Associate a pet to a sound.
 
@@ -20,7 +21,7 @@ class PetSound:
     -------
     says(sound=None)
         Prints the name of the pet and what sound it makes.
-    
+
     References
     ----------
     .. [1] https://realpython.com/documenting-python-code/
@@ -46,7 +47,6 @@ class PetSound:
         num_legs : int, optional
             The number of legs the pet has (default is 4).
         """
-
         self.name = name
         self.sound = sound
         self.num_legs = num_legs
@@ -68,10 +68,8 @@ class PetSound:
             If no sound is set for the pet or passed in as a
             parameter.
         """
-
         if self.sound is None and sound is None:
             raise NotImplementedError("Silent pets are not supported!")
 
         out_sound = self.sound if sound is None else sound
         print(self.says_str.format(name=self.name, sound=out_sound))
-
