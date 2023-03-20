@@ -1,30 +1,41 @@
 # Issue
 
-## Prerequisites
+| Short Title | Ticket | Link | Release | Labels | Priority* | Assignees |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|\<Title\>|\<Ticket\>|\<Link\>|\<Release\>|\<Labels\>|\<Priority\>|\<Assignees\>|
 
-* [ ] Can you reproduce the problem in safe mode?
-* [ ] Are you running the latest version?
-* [ ] Did you check the debugging guide?
-* [ ] Did you check the FAQs on Discuss?
-* [ ] Are you reporting to the correct repository?
-* [ ] Did you perform a cursory search?
+*High, Medium, or Low
 
-For more information, see the `CONTRIBUTING` guide.
+## Type (Select one)
+
+* [ ] Bug
+* [ ] Feature request
+* [ ] Enhancement
 
 ## Description
 
-[Description of the bug or feature]
+Be concise.
 
-## Steps to Reproduce
+## Details (if Bug)
 
-1. [First Step]
-2. [Second Step]
-3. [and so on...]
+Please be verbose, including relevant error messages and screenshots.
 
-**Expected behavior:** [What you expected to happen]
+### Expected behavior
 
-**Actual behavior:** [What actually happened]
+### Actual behavior
 
-## Versions
+### Steps to reproduce
 
-You can get this information from executing `npm version`.
+1. Step 1
+2. Step 2
+3. Step 3
+
+   ...
+
+### (Optional) Additional context
+
+## Checklist
+
+* [ ] I have followed the **CONTRIBUTING** and **CODE_OF_CONDUCT** guidelines
+* [ ] I have checked that there is no existing / duplicate Issue
+* [ ] I have provided all requested information above
