@@ -24,5 +24,8 @@ docs/
 *.temp*
 .temp/
 
+# Testing
+.pytest_cache/
+
 # VSCode
 .vscode/
