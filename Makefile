@@ -6,6 +6,7 @@ help:
 	@echo ""
 	@echo "  build       build docker image"
 	@echo "  exec        launch a shell in a running docker container"
+	@echo "  git-config  configure git with dummy user email and name"
 	@echo "  rmi         remove docker image"
 	@echo "  run         deploy docker container"
 	@echo "  stop        stop docker container"
