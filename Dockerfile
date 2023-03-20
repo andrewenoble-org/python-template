@@ -11,4 +11,4 @@ RUN /usr/local/bin/python -m pip install --upgrade pip \
     && /usr/local/bin/python -m pip install -r requirements.txt
 RUN rm requirements.txt
 
-COPY config/dockerfile/root/bashrc /root/.bashrc
+COPY config/dockerfile/root/.bashrc /root/.bashrc
