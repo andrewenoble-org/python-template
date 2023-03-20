@@ -1,2 +1,32 @@
-.git
-.cache
+# Byte-compiled
+__pycache__/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# MacOSX
+.AppleDouble
+.DS_Store
+.LSOverride
+
+# PyCharm
+.idea/
+
+# Temporary
+.scratch/
+*.scratch*
+.temp/
+*.temp*
+.tmp/
+*.tmp*
+
+# Testing
+.pytest_cache/
+
+# VSCode
+.vscode/

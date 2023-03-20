@@ -1,24 +1,24 @@
-[build-system]
-requires = ["setuptools>=43.0.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "python-template"
-version = "0.0.1"
+version = "0.0.0"
 license = "MIT"
 authors = [
     {name = "Andrew Noble", email = "andrew.e.noble@gmail.com"},
 ]
 description = "Python Template"
-repository = "https://github.com/andrewenoble/python-template"
+repository = "https://github.com/andrewenoble-org/python-template"
 readme = "README.rst"
-requires-python = ">=3.9"
+requires-python = "<3.11,>=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
     "logging_singleton",
 ]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
 
 [project.optional-dependencies] # Optional
 dev = [
@@ -31,23 +31,31 @@ test = [
     "pytest",
 ]
 
+# Black formatting
 [tool.black]
 line-length = 88
-target_version = ['py39']
 include = '\.pyi?$'
+# exclude a few common directories
 exclude = '''
 /(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
+    .eggs
+  | .git
+  | .hg
+  | .mypy_cache
+  | .tox
+  | .venv
   | _build
   | buck-out
   | build
   | dist
+  | venv
 )/
 '''
 
+# iSort formatting
 [tool.isort]
 profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+virtual_env = "venv"
