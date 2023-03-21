@@ -12,21 +12,17 @@ requires-python = "<3.11,>=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
-dependencies = [
-    "logging_singleton",
-]
+dependencies = []
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-[project.optional-dependencies] # Optional
+# Dev environment dependencies
+[project.optional-dependencies]
 dev = [
-    "pre-commit",
-    "pytest",
-]
-test = [
-    "coverage",
+    "numpydoc",
+    "sphinx_rtd_theme",
     "pre-commit",
     "pytest",
 ]

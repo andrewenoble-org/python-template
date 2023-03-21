@@ -1,7 +1,17 @@
 """Class to associate a pet to a sound."""
 
+from logging import getLogger
+from logging.config import dictConfig
 
-class PetSound:
+from yaml import safe_load
+
+with open("/home/project/config/logger/logger.yaml") as f:
+    config = safe_load(f.read())
+    dictConfig(config)
+    _logger = getLogger()
+
+
+class PetSounds:
     r"""Associate a pet to a sound.
 
     ...
@@ -28,9 +38,9 @@ class PetSound:
     .. [2] https://numpydoc.readthedocs.io/en/latest/example.html#example
     .. [3] https://en.wikipedia.org/wiki/Pet_Sounds
 
-    Example
-    -------
-    >>> PetSound("duck", "quack", num_legs=2).says()
+    Examples
+    --------
+    >>> PetSounds("duck", "quack", num_legs=2).says()
     "A duck says quack"
     """
 
@@ -47,6 +57,8 @@ class PetSound:
         num_legs : int, optional
             The number of legs the pet has (default is 4).
         """
+        _logger.info("Initialize attributes.")
+
         self.name = name
         self.sound = sound
         self.num_legs = num_legs
@@ -71,5 +83,6 @@ class PetSound:
         if self.sound is None and sound is None:
             raise NotImplementedError("Silent pets are not supported!")
 
+        _logger.info("Print the pet sound.")
         out_sound = self.sound if sound is None else sound
         print(self.says_str.format(name=self.name, sound=out_sound))

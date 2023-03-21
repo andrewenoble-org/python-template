@@ -13,7 +13,7 @@ dist/
 *.egg-info/
 
 # Documentation generated
-docs/*
+docs/
 
 # Environments
 .python-version
@@ -44,11 +44,11 @@ secrets/*
 
 # Temporary
 .scratch/
-*.scratch*
+.scratch*
 .temp/
-*.temp*
+.temp*
 .tmp/
-*.tmp*
+.tmp*
 
 # Testing
 .pytest_cache/

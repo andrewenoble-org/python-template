@@ -19,11 +19,11 @@ dist/
 
 # Temporary
 .scratch/
-*.scratch*
+.scratch*
 .temp/
-*.temp*
+.temp*
 .tmp/
-*.tmp*
+.tmp*
 
 # Testing
 .pytest_cache/
