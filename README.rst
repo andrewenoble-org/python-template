@@ -5,8 +5,6 @@ Python Template
 |Contributor Covenant|
 
 TO DO:
-- Add to Dockerfile and Makefile
-- Add to docsrc
 - Fix .github/workflows
 - Fix badge, add more badges
 - Create utils/yamler.py, utils/logger.py
