@@ -19,6 +19,14 @@ repos:
           args: [--allow-missing-credentials]
         - id: detect-private-key
         - id: end-of-file-fixer
+        - id: no-commit-to-branch
+        - id: requirements-txt-fixer
+        - id: trailing-whitespace
+
+    -   repo: https://github.com/lovesegfault/beautysh
+        rev: v6.2.1
+        hooks:
+        - id: beautysh
 
     -   repo: https://github.com/sqlfluff/sqlfluff
         rev: 2.0.1

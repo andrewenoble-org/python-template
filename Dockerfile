@@ -3,16 +3,10 @@ FROM python:3.9.16-slim-bullseye
 # set current working directory
 WORKDIR /home/project
 
-# install linux packages
-# (for docker install instructions, see https://docs.docker.com/engine/install/debian/)
+# install standard linux packages
 RUN apt-get update \
     && apt-get upgrade \
     && apt-get install -y \
-        containerd.io \
-        docker-buildx-plugin \
-        docker-ce \
-        docker-ce-cli \
-        docker-compose-pluging \
         git \
         make \
         nano \
@@ -34,6 +28,6 @@ COPY config/dockerfile/root/.bashrc /root/.bashrc
 
 # enable jupyter access in browser
 CMD [ \
-    "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "-y", "--allow-root", \
-    "--no-browser", "--NotebookApp.password=''", "--NotebookApp.token=''", \
+      "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "-y", "--allow-root", \
+      "--no-browser", "--NotebookApp.password=''", "--NotebookApp.token=''", \
 ]
