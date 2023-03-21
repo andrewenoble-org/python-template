@@ -27,7 +27,7 @@ ENV PYTHONPATH .:/home/project
 COPY config/dockerfile/root/.bashrc /root/.bashrc
 
 # enable jupyter access in browser
-CMD [ \
+ENTRYPOINT [ \
       "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "-y", "--allow-root", \
-      "--no-browser", "--NotebookApp.password=''", "--NotebookApp.token=''", \
+      "--no-browser", "--NotebookApp.password=''", "--NotebookApp.token=''" \
 ]
