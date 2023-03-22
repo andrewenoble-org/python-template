@@ -5,7 +5,7 @@ from logging.config import dictConfig
 
 from yaml import safe_load
 
-with open("/home/project/config/logger/logger.yaml") as f:
+with open("/home/project/config/logger/logger.yml") as f:
     config = safe_load(f.read())
     dictConfig(config)
     _logger = getLogger()

@@ -10,7 +10,7 @@ from python_template.pet_sounds import PetSounds
 EXPECTED_RESULT = "A cat says meow\n"
 
 
-with open("/home/project/config/logger/logger.yaml") as f:
+with open("/home/project/config/logger/logger.yml") as f:
     config = safe_load(f.read())
     dictConfig(config)
     _logger = getLogger()
