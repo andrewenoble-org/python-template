@@ -41,8 +41,9 @@ Please follow these steps:
     if relevant to your bug report, feature request, or suggested enhancement
 2. Open a new [Issue](https://github.com/andrewenoble/python-template/issues/new)
    and carefully fill out the template with all requested information
-3. Clone the GitHub repo and setup a development environment following instructions
-   in the README.  Be sure to install [pre-commit](https://pre-commit.com/) hooks
+3. Clone the GitHub repository and setup a development environment following
+   instructions in the README.  Be sure to install
+   [pre-commit](https://pre-commit.com/) hooks
 4. Create a new branch named **Issue-\<Short-Title\>**
 5. Make changes, following coding conventions listed below, expanding test coverage,
    and adding documentation
