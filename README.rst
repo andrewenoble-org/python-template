@@ -5,7 +5,9 @@ Python Template
 |Contributor Covenant|
 
 TO DO:
-- Create .github/workflows automatically update version and tag releases
+- Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
+- Create .github/workflow/release.yaml to update version and tag releases upon push to main
+- Possibly combine all pull_request and push jobs to two total workflow files
 - Fix badge, add more badges
 - Create utils/yamler.py, utils/logger.py
 - Copy this README to README.template.rst
@@ -18,7 +20,7 @@ Overview
 
 A Python Template repo.
 
-Read the `docs <https://github.com/>`_.
+Read the `docs <https://andrewenoble-org.github.io/python-template/>`_.
 
 ============
 Installation
