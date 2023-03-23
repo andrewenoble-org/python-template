@@ -5,7 +5,7 @@ Python Template
 |Contributor Covenant|
 
 TO DO:
-- Create .github/workflows automatically update version and tag release
+- Create .github/workflows automatically update version and tag releases
 - Fix badge, add more badges
 - Create utils/yamler.py, utils/logger.py
 - Copy this README to README.template.rst
