@@ -49,7 +49,7 @@ run:
 		--memory=8g \
 		--name python-template \
 		--ulimit nofile=1000000:1000000 \
-		python-template
+		python-template /bin/bash
 	@echo "Done!"
 
 .PHONY: stop

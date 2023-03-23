@@ -1,20 +1,38 @@
-name: Lint code
+---
+# This workflow executes several linters on changed files based on languages used in
+# your code base whenever you push a code or open a pull request.
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/github/super-linter
+name: Lint Code Base
 
-on: [push, pull_request]
+on:
+  # Runs on pushes to main and PRs
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
 
 jobs:
+  # Single linting job
   lint:
-    runs-on: ubuntu-20.04
-    timeout-minutes: 10
-
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.x"
-    - name: Run pre-commit
-      uses: pre-commit/action@v3.0.0
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          # Full git history is needed to get a proper list of changed files within
+          # `super-linter`
+          fetch-depth: 0
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: "main"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
