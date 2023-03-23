@@ -1,0 +1,9 @@
+---
+##########################
+## Hadolint config file ##
+##########################
+
+failure-threshold: error
+
+ignored:
+    - DL3008
