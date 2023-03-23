@@ -10,9 +10,9 @@ name: Lint Code Base
 on:
   # Runs on pushes to main and PRs
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -27,7 +27,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          # Full git history is needed to get a proper list of changed files within `super-linter`
+          # Full git history is needed to get a proper list of changed files within
+          # `super-linter`
           fetch-depth: 0
       - name: Lint Code Base
         uses: github/super-linter@v4
