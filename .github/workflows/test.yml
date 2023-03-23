@@ -6,12 +6,12 @@
 name: Test python package
 
 on:
-  push:
-    branches: ["main"]
+  # Runs upon creation of PR
   pull_request:
     branches: ["main"]
 
 jobs:
+  # Single job
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -25,6 +25,7 @@ jobs:
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v3
         with:
+          # Specify python version
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |

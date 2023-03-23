@@ -8,9 +8,7 @@
 name: Lint Code Base
 
 on:
-  # Runs on pushes to main and PRs
-  push:
-    branches: ["main"]
+  # Runs upon creation of PR
   pull_request:
     branches: ["main"]
 
@@ -19,7 +17,7 @@ permissions:
   contents: read
 
 jobs:
-  # Single linting job
+  # Single job
   lint:
     runs-on: ubuntu-latest
     timeout-minutes: 5
