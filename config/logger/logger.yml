@@ -18,7 +18,7 @@ handlers:
   stdout:
     class: logging.handlers.RotatingFileHandler
     formatter: short
-    filename: /home/project/logs/log.txt
+    filename: logs/log.txt
     maxBytes: 2621444
     backupCount: 3
 
