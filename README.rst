@@ -2,6 +2,9 @@
 Python Template
 ###############
 
+.. image:: https://img.shields.io/badge/doc-latest-blue.svg
+   :target: https://andrewenoble-org.github.io/python-template/
+   :alt: Docs
 .. image:: https://img.shields.io/pypi/l/tox?style=flat-square
    :target: https://opensource.org/licenses/MIT
    :alt: License
@@ -34,12 +37,6 @@ Overview
 ========
 
 A Python Template repo.
-
-.. |Docs| image:: https://img.shields.io/badge/doc-latest-blue.svg
-   :target: https://andrewenoble-org.github.io/python-template/
-   :alt: Docs
-
-Read the |Docs|.
 
 ============
 Installation
