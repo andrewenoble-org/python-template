@@ -11,6 +11,15 @@ Python Template
 .. image:: assets/coverage/coverage.svg
    :target: https://github.com/andrewenoble-org/python-template/tree/main/assets
    :alt: Code Coverage
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml
+   :target: Tests
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pages.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pages.yml
+   :target: Docs
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml
+   :target: Lint
 
 TO DO:
 - Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
