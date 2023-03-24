@@ -35,7 +35,7 @@ Overview
 
 A Python Template repo.
 
-.. |Docs| image:: /img/small-banana.png
+.. |Docs| image:: https://img.shields.io/badge/doc-latest-blue.svg
    :target: https://andrewenoble-org.github.io/python-template/
    :alt: Docs
 
