@@ -14,6 +14,7 @@ Python Template
 .. image:: assets/coverage/coverage.svg
    :target: https://github.com/andrewenoble-org/python-template/tree/main/assets
    :alt: Code Coverage
+
 .. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml/badge.svg
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml
    :alt: Tests
