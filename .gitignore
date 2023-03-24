@@ -11,10 +11,6 @@ assets/*
 # Byte-compiled
 __pycache__/
 
-# Coverage
-.coverage
-assets/coverage/coverage.svg
-
 # Distribution / packaging
 build/
 dist/

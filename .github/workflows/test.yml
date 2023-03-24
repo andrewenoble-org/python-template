@@ -36,6 +36,7 @@ jobs:
           pytest --cov
       - name: Create coverage badge
         run: |
+          rm -f assets/coverage/coverage.svg
           coverage-badge -o assets/coverage/coverage.svg
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
