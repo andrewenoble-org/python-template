@@ -1,6 +1,6 @@
 ---
 # Simple workflow for checking that static content builds without error
-name: QC static content
+name: docs-qc
 
 on:
   # Runs on pushes to main

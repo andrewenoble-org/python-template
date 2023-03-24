@@ -1,6 +1,7 @@
 """Configureable Logger Class."""
 
-from logging import Logger, getLogger
+from logging import Logger as LoggingLoggerClass
+from logging import getLogger
 from logging.config import dictConfig
 
 from python_template.utils.yaml_handler import YAMLHandler
@@ -18,7 +19,7 @@ class Logger:
     def get_logger(
         self,
         logger_config_path: str = "config/logger/logger.yml",
-    ) -> Logger:
+    ) -> LoggingLoggerClass:
         r"""
         Parameters
         ----------

@@ -3,7 +3,7 @@
 # versions. For more information see:
 # https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Test python package
+name: tests
 
 on:
   # Runs upon creation of PR
@@ -41,4 +41,4 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload the badge
-          path: 'assets/coverage/coverage.svg'
+          path: './assets/coverage/coverage.svg'

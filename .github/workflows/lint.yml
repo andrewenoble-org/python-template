@@ -8,7 +8,7 @@
 #
 # Notes:
 # VALIDATE_PYTHON_ISORT set to false due to conflicts with pre-commit iSort
-name: Lint Code Base
+name: linter
 
 on:
   # Runs upon creation of PR
