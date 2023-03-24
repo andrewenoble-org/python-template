@@ -25,7 +25,6 @@ TO DO:
 - Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
 - Create .github/workflow/release.yaml to update version and tag releases upon push to main
 - Possibly combine all pull_request and push jobs to two total workflow files
-- Fix badge, add more badges
 - Copy this README to README.template.rst
 - Add a new README describing how to automatically transform template into your own repo with python_template -> your repo name, name -> your name, email -> your email, etc.
 - Add a note that README.rst should be removed and README.template.rst should be renamed README.rst (or let the script do this automatically)
@@ -36,7 +35,10 @@ Overview
 
 A Python Template repo.
 
-Read the `docs <https://andrewenoble-org.github.io/python-template/>`_.
+Read the
+.. image:: https://img.shields.io/badge/doc-latest-blue.svg
+   :target: https://andrewenoble-org.github.io/python-template/
+   :alt: Docs
 
 ============
 Installation
