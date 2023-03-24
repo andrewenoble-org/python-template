@@ -18,6 +18,8 @@ help:
 	@echo ""
 	@echo "  stop        stop docker container"
 	@echo ""
+	@echo "  test        run pytest and create test-coverage badge
+	@echo ""
 	@echo "Check the Makefile to know exactly what each target is doing."
 
 .PHONY: build
@@ -56,6 +58,15 @@ run:
 		--name python-template \
 		--ulimit nofile=1000000:1000000 \
 		python-template /bin/bash
+	@echo "Done!"
+
+.PHONY: test
+test:
+	@echo "Running tests..."
+	pytest --cov
+	@echo "Creating badge..."
+	rm -f assets/coverage/coverage.svg
+	coverage-badge -o assets/coverage/coverage.svg
 	@echo "Done!"
 
 .PHONY: stop
