@@ -5,15 +5,21 @@ Python Template
 .. image:: https://img.shields.io/badge/doc-latest-blue.svg
    :target: https://andrewenoble-org.github.io/python-template/
    :alt: Docs
+   :align: center
 .. image:: https://img.shields.io/pypi/l/tox?style=flat-square
    :target: https://opensource.org/licenses/MIT
    :alt: License
+   :align: center
 .. image:: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
    :target: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
    :alt: Code of Conduct
+   :align: center
 .. image:: assets/coverage/coverage.svg
    :target: https://github.com/andrewenoble-org/python-template/tree/main/assets
    :alt: Code Coverage
+   :align: center
+
+|
 
 .. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml/badge.svg
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml
