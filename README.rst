@@ -8,6 +8,9 @@ Python Template
 .. image:: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
    :target: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
    :alt: Code of Conduct
+.. image:: assets/coverage/coverage.svg
+   :target: https://github.com/andrewenoble-org/python-template/tree/main/assets/coverage
+   :alt: Code Coverage
 
 TO DO:
 - Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
