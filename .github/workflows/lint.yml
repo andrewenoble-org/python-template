@@ -5,6 +5,9 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/github/super-linter
+#
+# Notes:
+# VALIDATE_PYTHON_ISORT set to false due to conflicts with pre-commit iSort
 name: Lint Code Base
 
 on:
