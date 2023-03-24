@@ -35,10 +35,11 @@ Overview
 
 A Python Template repo.
 
-Read the
-.. image:: https://img.shields.io/badge/doc-latest-blue.svg
+.. |Docs| image:: /img/small-banana.png
    :target: https://andrewenoble-org.github.io/python-template/
    :alt: Docs
+
+Read the |Docs|.
 
 ============
 Installation
