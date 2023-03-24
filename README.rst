@@ -2,24 +2,18 @@
 Python Template
 ###############
 
-|Contributor Covenant|
-
-Markdown version of badges:
-
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytorch-lightning)](https://pypi.org/project/pytorch-lightning/)
-[![PyPI Status](https://badge.fury.io/py/pytorch-lightning.svg)](https://badge.fury.io/py/pytorch-lightning)
-[![PyPI Status](https://pepy.tech/badge/pytorch-lightning)](https://pepy.tech/project/pytorch-lightning)
-[![codecov](https://codecov.io/gh/Lightning-AI/lightning/branch/master/graph/badge.svg?token=SmzX8mnKlA)](https://codecov.io/gh/Lightning-AI/lightning)
-[![ReadTheDocs](https://readthedocs.org/projects/pytorch-lightning/badge/?version=stable)](https://lightning.ai/docs/pytorch/stable/)
-[![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/Lightning-AI/lightning/blob/master/LICENSE)
-
+.. image:: https://img.shields.io/pypi/l/tox?style=flat-square
+   :target: https://opensource.org/licenses/MIT
+   :alt: License
+.. image:: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
+   :target: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+   :alt: Code of Conduct
 
 TO DO:
 - Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
 - Create .github/workflow/release.yaml to update version and tag releases upon push to main
 - Possibly combine all pull_request and push jobs to two total workflow files
 - Fix badge, add more badges
-- Create utils/yamler.py, utils/logger.py
 - Copy this README to README.template.rst
 - Add a new README describing how to automatically transform template into your own repo with python_template -> your repo name, name -> your name, email -> your email, etc.
 - Add a note that README.rst should be removed and README.template.rst should be renamed README.rst (or let the script do this automatically)
@@ -69,5 +63,3 @@ Setup a Development Environment using Docker, Make, and
    .. code-block:: bash
 
       $ make git-config
-
-.. |Contributor Covenant| image:: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg :target: code_of_conduct.md
