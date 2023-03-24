@@ -19,7 +19,7 @@ jobs:
       fail-fast: true
       matrix:
         python-version: ["3.9", "3.10"]
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, macosx-latest]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
@@ -31,6 +31,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Test with pytest
+      - name: Test with pytest and coverage
         run: |
-          pytest
+          pytest --cov
+      - name: Create coverage badge
+        run: |
+          coverage-badge -o assets/coverage/coverage.svg
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload the badge
+          path: 'assets/coverage/coverage.svg'

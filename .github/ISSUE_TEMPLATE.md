@@ -1,8 +1,8 @@
 # Issue
 
-| Short Title | Ticket | Link | Release | Labels | Priority* | Assignees |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|\<Title\>|\<Ticket\>|\<Link\>|\<Release\>|\<Labels\>|\<Priority\>|\<Assignees\>|
+| Short Title | Ticket | Link | Release | Priority* | Assignees |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|\<Title\>|\<Ticket\>|\<Link\>|\<Release\>|\<Priority\>|\<Assignees\>|
 
 *High, Medium, or Low
 
