@@ -2,6 +2,10 @@
 assets/*
 
 # Assets exception
+!assets/coverage
+!assets/template
+
+# Assets exception
 !assets/.gitkeep
 
 # Byte-compiled

@@ -1,0 +1,22 @@
+---
+# Simple workflow for checking that static content builds without error
+name: pages-qc
+
+on:
+  # Runs on pushes to main
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  # Single job
+  pages_qc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Build docs
+        run: ./docsrc/build

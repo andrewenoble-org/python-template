@@ -1,19 +1,13 @@
 from contextlib import redirect_stdout
 from io import StringIO
-from logging import getLogger
-from logging.config import dictConfig
-
-from yaml import safe_load
 
 from python_template.pet_sounds import PetSounds
+from python_template.utils.logger import Logger
 
 EXPECTED_RESULT = "A cat says meow\n"
 
 
-with open("config/logger/logger.yml") as f:
-    config = safe_load(f.read())
-    dictConfig(config)
-    _logger = getLogger()
+_logger = Logger().get_logger()
 
 
 def test_pet_sound():

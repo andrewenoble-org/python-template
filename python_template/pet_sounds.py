@@ -1,14 +1,8 @@
 """Class to associate a pet to a sound."""
 
-from logging import getLogger
-from logging.config import dictConfig
+from python_template.utils.logger import Logger
 
-from yaml import safe_load
-
-with open("config/logger/logger.yml") as f:
-    config = safe_load(f.read())
-    dictConfig(config)
-    _logger = getLogger()
+_logger = Logger().get_logger()
 
 
 class PetSounds:

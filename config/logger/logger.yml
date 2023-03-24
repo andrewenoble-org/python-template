@@ -1,5 +1,5 @@
 ---
-# https://docs.python.org/3/library/logging.config.html#logging-config-fileformat
+# See https://docs.python.org/3/library/logging.config.html#logging-config-fileformat
 
 version: 1
 

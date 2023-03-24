@@ -1,6 +1,6 @@
-###############
-Python Template
-###############
+#########
+REPO_NAME
+#########
 
 .. image:: https://img.shields.io/badge/doc-latest-blue.svg
    :target: https://andrewenoble-org.github.io/python-template/
@@ -36,44 +36,19 @@ Python Template
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml
    :alt: Lint
 
-TO DO:
-- Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
-- Create .github/workflow/release.yaml to update version and tag releases upon push to main
-- Possibly combine all pull_request and push jobs to two total workflow files
-- Add a new README describing how to automatically transform template into your own repo with python_template -> your repo name, name -> your name, email -> your email, etc.
-- Add a note that README.rst should be removed and README.template.rst should be renamed README.rst (or let the script do this automatically)
-
 ========
 Overview
 ========
 
-A Python Template GitHub repository.
+GITHUB_REPO_DESCRIPTION
 
-.. note::
-   This template repository is not intended to be :code:`pip` installable.
+============
+Installation
+============
 
-=====
-Usage
-=====
+.. code:: bash
 
-#. Install and launch
-   `Docker Desktop <https://docs.docker.com/desktop/>`_ and
-   `VSCode <https://code.visualstudio.com/download>`_.
-
-#. Clone the repository to a folder with the same name as your repository
-
-   .. code:: bash
-
-      $ GITHUB_REPO_NAME=<your-respository-name>
-      $ git clone https://github.com/andrewenoble-org/python-template.git $GITHUB_REPO_NAME
-
-#. Edit :code:`assets/template/template.yml`, inserting your information
-
-#. Run script to create your respository from the template
-
-#. Make your initial commit and push to GitHub
-
-#. Recommended GitHub repository configurations
+   $ python -m pip install 'python-template @ git+https://github.com/andrewenoble-org/python-template'
 
 ============
 Contributing
@@ -115,7 +90,7 @@ Setup a Development Environment on your local machine using Docker Desktop, Make
 
    .. code-block:: bash
 
-      $ make test
+      $ pytest --cov --cov-report term-missing
 
 #. Recommended VSCode Extensions
 
@@ -131,9 +106,3 @@ Setup a Development Environment on your local machine using Docker Desktop, Make
    #. Pylance
    #. sqlfluff
    #. YAML
-
-.. note::
-   This setup has only been tested on
-   MacOSX Ventura 13.2.1,
-   Docker version 20.10.23, build 7155243, and
-   VSCode 1.76.2 (Universal)

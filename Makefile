@@ -10,11 +10,15 @@ help:
 	@echo ""
 	@echo "  git-config  configure git with dummy user email and name"
 	@echo ""
+	@echo "  git-undo-d  undo deletion (not yet committed) of one or more files"
+	@echo ""
 	@echo "  rmi         remove docker image"
 	@echo ""
 	@echo "  run         deploy docker container"
 	@echo ""
 	@echo "  stop        stop docker container"
+	@echo ""
+	@echo "  test        run pytest and create test-coverage badge
 	@echo ""
 	@echo "Check the Makefile to know exactly what each target is doing."
 
@@ -33,6 +37,10 @@ git-config:
 	git config --global user.email "a@b"
 	git config --global user.name "a"
 
+.PHONY: git-undo-d
+git-undo-d:
+	git ls-files -d | xargs git checkout --
+
 .PHONY: rmi
 rmi:
 	@echo "Removing docker image..."
@@ -50,6 +58,15 @@ run:
 		--name python-template \
 		--ulimit nofile=1000000:1000000 \
 		python-template /bin/bash
+	@echo "Done!"
+
+.PHONY: test
+test:
+	@echo "Running tests..."
+	pytest --cov
+	@echo "Creating badge..."
+	rm -f assets/coverage/coverage.svg
+	coverage-badge -o assets/coverage/coverage.svg
 	@echo "Done!"
 
 .PHONY: stop
