@@ -10,6 +10,8 @@ help:
 	@echo ""
 	@echo "  git-config  configure git with dummy user email and name"
 	@echo ""
+	@echo "  git-undo-d  undo deletion (not yet committed) of one or more files"
+	@echo ""
 	@echo "  rmi         remove docker image"
 	@echo ""
 	@echo "  run         deploy docker container"
@@ -32,6 +34,10 @@ exec:
 git-config:
 	git config --global user.email "a@b"
 	git config --global user.name "a"
+
+.PHONY: git-undo-d
+git-undo-d:
+	git ls-files -d | xargs git checkout --
 
 .PHONY: rmi
 rmi:
