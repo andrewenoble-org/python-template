@@ -42,4 +42,4 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload the badge
-          path: './assets/coverage/coverage.svg'
+          path: ./assets/coverage/coverage.svg
