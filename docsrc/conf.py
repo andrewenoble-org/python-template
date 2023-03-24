@@ -2,7 +2,7 @@ import os
 from sys import path
 
 # doc theme
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_rtd_them"
 
 # doc extensions
 extensions = [

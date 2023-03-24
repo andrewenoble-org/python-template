@@ -115,7 +115,7 @@ Setup a Development Environment on your local machine using Docker Desktop, Make
 
    .. code-block:: bash
 
-      $ pytest --cov --cov-report term-missing
+      $ make test
 
 #. Recommended VSCode Extensions
 
