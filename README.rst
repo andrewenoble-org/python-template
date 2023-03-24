@@ -9,7 +9,7 @@ Python Template
    :target: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
    :alt: Code of Conduct
 .. image:: assets/coverage/coverage.svg
-   :target: https://github.com/andrewenoble-org/python-template/tree/main/assets/coverage
+   :target: https://github.com/andrewenoble-org/python-template/tree/main/assets
    :alt: Code Coverage
 
 TO DO:
