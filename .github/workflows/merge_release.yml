@@ -29,8 +29,11 @@ jobs:
         run: |
           sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./pyproject.toml
           sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./docsrc/conf.py
-          git add .
-          git commit -m ${{ steps.bump.outputs.tag }}
+      - uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: GitHub Actions
+          committer_email: actions@github.com
+          message: ${{ steps.bump.outputs.tag }}
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
