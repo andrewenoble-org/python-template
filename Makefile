@@ -71,7 +71,7 @@ run:
 .PHONY: test
 test:
 	@echo "Running tests..."
-	pytest --cov
+	pytest --cov --cov-report term-missing
 	@echo "Creating badge..."
 	rm -f assets/coverage/coverage.svg
 	coverage-badge -o assets/coverage/coverage.svg
