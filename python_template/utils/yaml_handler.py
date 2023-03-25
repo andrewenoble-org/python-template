@@ -12,7 +12,7 @@ class YAMLHandler:
     -------
     load(yaml_path)
         Loads YAML file to Dict.
-    write(yaml_dict)
+    write(yaml_dict, yaml_path)
         Writes Dict to YAML file.
     """
 

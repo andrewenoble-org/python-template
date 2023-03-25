@@ -5,9 +5,9 @@ All types of contributions are welcome!
 ## Table of Contents
 
 * [Code-of-Conduct](#code-of-conduct)
-* [Asking a question](#asking-a-question)
+* [Asking a Question](#asking-a-question)
 * [Contributing](#contributing)
-* [Legal notice](#legal-notice)
+* [Legal Notice](#legal-notice)
 
 ## Code-of-Conduct
 
@@ -17,40 +17,106 @@ By participating, you are expected to uphold this code. Please report unacceptab
 behavior to
 [andrewenoble@gmail.com](andrewenoble@gmail.com).
 
-## Asking a question
+## Asking a Question
 
-Please check first if existing
-[Documentation](https://github.com)
-or
-[Issues](https://github.com/andrewenoble/python-template/issues)
+Please first check if current
+[GitHub Pages](https://andrewenoble-org.github.io/python-template/)
+or Issues linked to existing
+[GitHub Projects](https://github.com/andrewenoble-org/python-template/projects)
 address the question
 
 If you still have a question or would appreciate further clarification, please open a
 new
-[Issue](https://github.com/andrewenoble/python-template/issues/new)
+[GitHub Issue](https://github.com/andrewenoble-org/python-template/issues/new)
 and carefully fill out the template with all requested information.
 
 ## Contributing
 
-Please follow these steps:
+Please follow these steps to open a new Issue and start work in a development (dev)
+environment:
 
-1. Check if existing
-    [Documentation](https://github.com)
-    or
-    [Issues](https://github.com/andrewenoble/python-template/issues)
-    if relevant to your bug report, feature request, or suggested enhancement
-2. Open a new [Issue](https://github.com/andrewenoble/python-template/issues/new)
-   and carefully fill out the template with all requested information
-3. Clone the GitHub repository and setup a development environment following
-   instructions in the README.  Be sure to install
-   [pre-commit](https://pre-commit.com/) hooks
-4. Create a new branch named **Issue-\<Short-Title\>**
-5. Make changes, following coding conventions listed below, expanding test coverage,
-   and adding documentation
-6. Check that all new and existing tests pass.  Carefully review changes for bugs
-7. Commit changes, resolving any issues flagged by [pre-commit](https://pre-commit.com/)
-8. Open a Pull Request, and carefully fill out the template with all requested
-   information.
+1. Check if current
+   [GitHub Pages](https://andrewenoble-org.github.io/python-template/)
+   or Issues linked to existing
+   [GitHub Projects](https://github.com/andrewenoble-org/python-template/projects)
+   are relevant to your bug report, feature request, or suggested enhancement
+2. Open a new [GitHub Issue](https://github.com/andrewenoble-org/python-template/issues/new),
+   carefully fill out the template with all requested information, and
+   link the Issue to an existing Project
+3. On your local machine, install and launch
+   [Docker Desktop](https://docs.docker.com/desktop/)
+   and
+   [VSCode](https://code.visualstudio.com/download)
+4. Clone the repository
+
+   ```bash
+   git clone https://github.com/andrewenoble-org/python-template.git
+   ```
+
+5. Descend into the repository and checkout a dev branch
+
+   ```bash
+   cd python-template && git checkout -b <project-short-description>-<issue-number>-<issue-short-title>
+   ```
+
+6. Make dev image and container.  Also setup fake config for local `git` user to avoid
+   `git` CLI errors
+
+   ```bash
+   make build && make run && make git-config
+   ```
+
+7. Open VSCod, install
+   [Docker Extension](https://code.visualstudio.com/docs/containers/overview),
+   and follow the Docker Extension instructions to attach a VSCode Window to your
+   Docker container
+
+8. Install [pre-commit](https://pre-commit.com/) within your dev container to activate
+   hooks
+
+   ```bash
+   pre-commit install
+   ```
+
+9. To run tests and check coverage, use
+
+   ```bash
+   make test
+   ```
+
+10. Install additional VSCode Extensions to enable, within a single Window,
+    syntax highlighting,
+    rendered document previews,
+    and Jupyter notebooks
+
+      a. Better TOML
+      b. HTML Preview
+      c. Jupyter
+      d. markdownlint
+      e. reStructuredText
+      f. reStructuredText Syntax highlighting
+      g. Preview
+      h. Python
+      i. Pylance
+      j. sqlfluff
+      k. YAML
+
+11. Make changes, following coding conventions listed below, expanding test coverage,
+    and improving documentation
+12. Check that all new and existing tests pass.  Carefully review changes for bugs
+13. Commit changes, resolving any issues flagged by [pre-commit](https://pre-commit.com/)
+14. Open a Pull Request, and carefully fill out the template with all requested
+    information
+15. Immediately before your final Squash and Merge to `main` within the GitHub UI,
+    navigate to the top level of the respository, and run
+
+   ```bash
+   make test
+
+   git add . && git commit -m "log final code coverage estimate" && git push
+   ```
+
+   to ensure that the code coverage estimate is correct.
 
 Please follow these coding conventions:
 
@@ -60,8 +126,8 @@ Please follow these coding conventions:
   for details
 2. Use [numpydoc](https://numpydoc.readthedocs.io/en/latest/index.html) docstring style
 3. Use meaningful, human-readable names for variables, classes, etc.
-4. Comment complex code blocks
+4. Avoid complex code blocks.  If required, carefully comment the code block
 
-## Legal notice
+## Legal Notice
 
 When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.

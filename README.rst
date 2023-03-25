@@ -19,29 +19,22 @@ Python Template
    :alt: Code of Conduct
 
 .. image:: assets/coverage/coverage.svg
-   :target: https://github.com/andrewenoble-org/python-template/tree/main/assets
+   :target: https://github.com/andrewenoble-org/python-template/blob/main/assets/coverage/coverage.svg
    :alt: Code Coverage
 
 |
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
    :alt: Tests
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pages.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pages.yml
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
    :alt: Docs
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
    :alt: Lint
-
-TO DO:
-- Edit .github/workflow/pages.yaml to automatically deploy pages upon push to main
-- Create .github/workflow/release.yaml to update version and tag releases upon push to main
-- Possibly combine all pull_request and push jobs to two total workflow files
-- Add a new README describing how to automatically transform template into your own repo with python_template -> your repo name, name -> your name, email -> your email, etc.
-- Add a note that README.rst should be removed and README.template.rst should be renamed README.rst (or let the script do this automatically)
 
 ========
 Overview
@@ -74,63 +67,6 @@ Usage
 #. Make your initial commit and push to GitHub
 
 #. Recommended GitHub repository configurations
-
-============
-Contributing
-============
-
-Setup a Development Environment on your local machine using Docker Desktop, Make, and
-`pre-commit <https://pre-commit.com/>`_.
-
-#. Install and launch
-   `Docker Desktop <https://docs.docker.com/desktop/>`_ and
-   `VSCode <https://code.visualstudio.com/download>`_.
-
-#. Clone the repository
-
-   .. code:: bash
-
-      $ git clone https://github.com/andrewenoble-org/python-template.git
-
-#. Descend into the repository and checkout a dev branch
-
-   .. code:: bash
-
-      $ GIT_USERNAME=<git-username>
-      $ cd python-template && git checkout $GIT_USERNAME-dev
-
-#. Make dev image and container, adding a dummy git config
-
-   .. code:: bash
-
-      $ make build && make run && make git-config
-
-#. Install :code:`pre-commit` within your dev container to activate hooks
-
-   .. code-block:: bash
-
-      $ pre-commit install
-
-#. Check that tests pass and that coverage is consistent with the badge above
-
-   .. code-block:: bash
-
-      $ make test
-
-#. Recommended VSCode Extensions
-
-   #. Better TOML
-   #. Docker
-   #. HTML Preview
-   #. Jupyter
-   #. markdownlint
-   #. reStructuredText
-   #. reStructuredText Syntax highlighting
-   #. Preview
-   #. Python
-   #. Pylance
-   #. sqlfluff
-   #. YAML
 
 .. note::
    This setup has only been tested on

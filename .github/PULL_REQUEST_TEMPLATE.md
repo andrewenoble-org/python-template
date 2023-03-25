@@ -2,7 +2,7 @@
 
 ## Ticket
 
-[\<ticket-name\>](\<link\>)
+Fixes [\<proj-short-name\>-<\issue-number\>](\<issue-link\>)
 
 ## Description
 
