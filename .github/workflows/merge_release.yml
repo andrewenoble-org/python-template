@@ -27,9 +27,8 @@ jobs:
           WITH_V: false
       - name: Find and replace version in pyproject.toml and conf.py
         run: |
-          echo ${{ steps.bump.outputs.tag }}
-          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" pyproject.toml
-          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" conf.py
+          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./pyproject.toml
+          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./docsrc/conf.py
           git add .
           git commit -m ${{ steps.bump.outputs.tag }}
       - name: Push changes
