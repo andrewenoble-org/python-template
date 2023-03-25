@@ -28,6 +28,7 @@ COPY config/dockerfile/root/.bashrc /root/.bashrc
 
 # enable jupyter access in browser
 ENTRYPOINT [ \
-      "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "-y", "--allow-root", \
-      "--no-browser", "--NotebookApp.password=''", "--NotebookApp.token=''" \
+      "jupyter", "lab", "--notebook-dir='/'", "--ip=0.0.0.0", "--port=8888", "-y", \
+      "--allow-root", "--no-browser", "--NotebookApp.password=''", \
+      "--NotebookApp.token=''" \
 ]

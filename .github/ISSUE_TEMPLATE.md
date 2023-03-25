@@ -1,10 +1,8 @@
 # Issue
 
-| Short Title | Ticket | Link | Release | Priority* |
-|:-:|:-:|:-:|:-:|:-:|
-|\<Title\>|\<Ticket\>|\<Link\>|\<Release\>|\<Priority\>|
+## Short Title
 
-*High, Medium, or Low
+\<Short-Title\>
 
 ## Type (Select one)
 

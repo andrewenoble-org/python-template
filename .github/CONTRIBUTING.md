@@ -66,7 +66,7 @@ environment:
    make build && make run && make git-config
    ```
 
-7. Open VSCod, install
+7. Open VSCode, install
    [Docker Extension](https://code.visualstudio.com/docs/containers/overview),
    and follow the Docker Extension instructions to attach a VSCode Window to your
    Docker container
