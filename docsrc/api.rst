@@ -2,7 +2,7 @@
 API
 ###
 
-.. autoclass:: pet_sounds.PetSounds
+.. autoclass:: python_template.pet_sounds.PetSounds
 
 =====
 utils

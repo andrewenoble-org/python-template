@@ -20,4 +20,4 @@ version = "0.0.0"
 license = "MIT"
 
 # insert path to source code
-sys.path.insert(0, os.path.abspath("../python_template"))
+sys.path.insert(0, os.path.abspath(".."))
