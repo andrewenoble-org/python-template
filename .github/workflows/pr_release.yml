@@ -1,5 +1,8 @@
 ---
-# See https://github.com/mathieudutour/github-tag-action
+# See
+# https://github.com/anothrNick/github-tag-action with DRY_RUN: true
+# and
+# https://github.com/EndBug/add-and-commit
 name: pr-release
 
 on:
@@ -19,7 +22,7 @@ jobs:
           fetch-depth: 0
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
-      - name: Bump version and push tag
+      - name: (Dry Run) Bump version and push tag
         id: bump
         uses: anothrNick/github-tag-action@1
         env:
@@ -33,4 +36,5 @@ jobs:
           sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./docsrc/conf.py
       - uses: EndBug/add-and-commit@v9
         with:
+          # Use new tag string as commit message
           message: ${{ steps.bump.outputs.tag }}

@@ -10,6 +10,8 @@ help:
 	@echo ""
 	@echo "  git-config  configure git with dummy user email and name"
 	@echo ""
+	@echo "  git-push-f  commit and force push with message M=\"...\""
+	@echo ""
 	@echo "  git-undo-d  undo deletion (not yet committed) of one or more files"
 	@echo ""
 	@echo "  rmi         remove docker image"
@@ -18,7 +20,7 @@ help:
 	@echo ""
 	@echo "  stop        stop docker container"
 	@echo ""
-	@echo "  test        run pytest and create test-coverage badge
+	@echo "  test        run pytest and create test-coverage badge"
 	@echo ""
 	@echo "Check the Makefile to know exactly what each target is doing."
 
@@ -36,6 +38,12 @@ exec:
 git-config:
 	git config --global user.email "a@b"
 	git config --global user.name "a"
+
+.PHONY: git-push-f
+git-push-f:
+	@echo "Committing and force pushing..."
+	git add . && git commit -m "$(M)" && git push -f
+	@echo "Done!"
 
 .PHONY: git-undo-d
 git-undo-d:

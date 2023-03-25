@@ -28,6 +28,10 @@ Python Template
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
    :alt: Merge Pages
 
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_release.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_release.yml/badge.svg
+   :alt: Merge Release
+
 .. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
    :alt: PR List
