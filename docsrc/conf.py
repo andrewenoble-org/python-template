@@ -16,7 +16,7 @@ numfig = True
 
 # project details for docs
 project = "python_template"
-version = "0.0.0"
+version = "0.0.1"
 license = "MIT"
 
 # insert path to source code
