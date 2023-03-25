@@ -11,7 +11,7 @@ on:
 permissions: write-all
 
 jobs:
-  build:
+  merge-release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,20 +22,5 @@ jobs:
         uses: anothrNick/github-tag-action@1
         env:
           DEFAULT_BUMP: patch
-          DRY_RUN: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: false
-      - name: Find and replace version in pyproject.toml and conf.py
-        run: |
-          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./pyproject.toml
-          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./docsrc/conf.py
-      - uses: EndBug/add-and-commit@v9
-        with:
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
-          message: ${{ steps.bump.outputs.tag }}
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
