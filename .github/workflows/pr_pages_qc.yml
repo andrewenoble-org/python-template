@@ -1,6 +1,6 @@
 ---
 # Simple workflow for checking that static content builds without error
-name: pages-qc
+name: pr-pages-qc
 
 on:
   # Runs on pushes to main
@@ -9,7 +9,7 @@ on:
 
 jobs:
   # Single job
-  pages_qc:
+  pr-pages-qc:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

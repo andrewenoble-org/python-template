@@ -2,11 +2,11 @@
 API
 ###
 
-.. autoclass:: pet_sounds.PetSounds
+.. autoclass:: python_template.pet_sounds.PetSounds
 
 =====
 utils
 =====
 
-.. autoclass:: utils.yaml_handler.YAMLHandler
-.. autoclass:: utils.logger.Logger
+.. autoclass:: python_template.utils.yaml_handler.YAMLHandler
+.. autoclass:: python_template.utils.logger.Logger

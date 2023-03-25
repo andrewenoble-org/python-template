@@ -1,8 +1,8 @@
 # Issue
 
-| Short Title | Ticket | Link | Release | Priority* | Assignees |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-|\<Title\>|\<Ticket\>|\<Link\>|\<Release\>|\<Priority\>|\<Assignees\>|
+| Short Title | Ticket | Link | Release | Priority* |
+|:-:|:-:|:-:|:-:|:-:|
+|\<Title\>|\<Ticket\>|\<Link\>|\<Release\>|\<Priority\>|
 
 *High, Medium, or Low
 
@@ -11,6 +11,7 @@
 * [ ] Bug
 * [ ] Feature request
 * [ ] Enhancement
+* [ ] Question
 
 ## Description
 

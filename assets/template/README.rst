@@ -19,22 +19,22 @@ REPO_NAME
    :alt: Code of Conduct
 
 .. image:: assets/coverage/coverage.svg
-   :target: https://github.com/andrewenoble-org/python-template/tree/main/assets
+   :target: https://github.com/andrewenoble-org/python-template/blob/main/assets/coverage/coverage.svg
    :alt: Code Coverage
 
 |
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/test.yml
-   :alt: Tests
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
+   :alt: Merge Pages
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pages.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pages.yml
-   :alt: Docs
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
+   :alt: PR List
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/lint.yml
-   :alt: Lint
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
+   :alt: PR Test
 
 ========
 Overview
@@ -50,59 +50,8 @@ Installation
 
    $ python -m pip install 'python-template @ git+https://github.com/andrewenoble-org/python-template'
 
-============
-Contributing
-============
-
-Setup a Development Environment on your local machine using Docker Desktop, Make, and
-`pre-commit <https://pre-commit.com/>`_.
-
-#. Install and launch
-   `Docker Desktop <https://docs.docker.com/desktop/>`_ and
-   `VSCode <https://code.visualstudio.com/download>`_.
-
-#. Clone the repository
-
-   .. code:: bash
-
-      $ git clone https://github.com/andrewenoble-org/python-template.git
-
-#. Descend into the repository and checkout a dev branch
-
-   .. code:: bash
-
-      $ GIT_USERNAME=<git-username>
-      $ cd python-template && git checkout $GIT_USERNAME-dev
-
-#. Make dev image and container, adding a dummy git config
-
-   .. code:: bash
-
-      $ make build && make run && make git-config
-
-#. Install :code:`pre-commit` within your dev container to activate hooks
-
-   .. code-block:: bash
-
-      $ pre-commit install
-
-#. Check that tests pass and that coverage is consistent with the badge above
-
-   .. code-block:: bash
-
-      $ pytest --cov --cov-report term-missing
-
-#. Recommended VSCode Extensions
-
-   #. Better TOML
-   #. Docker
-   #. HTML Preview
-   #. Jupyter
-   #. markdownlint
-   #. reStructuredText
-   #. reStructuredText Syntax highlighting
-   #. Preview
-   #. Python
-   #. Pylance
-   #. sqlfluff
-   #. YAML
+.. note::
+   This setup has only been tested on
+   MacOSX Ventura 13.2.1,
+   Docker version 20.10.23, build 7155243, and
+   VSCode 1.76.2 (Universal)

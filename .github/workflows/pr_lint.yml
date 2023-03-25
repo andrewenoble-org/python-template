@@ -8,7 +8,7 @@
 #
 # Notes:
 # VALIDATE_PYTHON_ISORT set to false due to conflicts with pre-commit iSort
-name: linter
+name: pr-lint
 
 on:
   # Runs upon creation of PR
@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   # Single job
-  lint:
+  pr-lint:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
