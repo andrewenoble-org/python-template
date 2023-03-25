@@ -34,8 +34,3 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           message: ${{ steps.bump.outputs.tag }}
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}

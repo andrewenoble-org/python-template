@@ -4,7 +4,7 @@ name: merge-release
 
 on:
   # Runs on pushes to main
-  pull_request:
+  push:
     branches: ["main"]
 
 # Sets permissions of the GITHUB_TOKEN to enable find/replace push
