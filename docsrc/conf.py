@@ -1,5 +1,5 @@
 import os
-from sys import path
+import sys
 
 # doc theme
 html_theme = "sphinx_rtd_theme"
@@ -20,4 +20,4 @@ version = "0.0.0"
 license = "MIT"
 
 # insert path to source code
-path.insert(0, os.path.abspath("../python_template"))
+sys.path.insert(0, os.path.abspath(".."))
