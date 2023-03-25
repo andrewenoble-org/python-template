@@ -128,6 +128,21 @@ Please follow these coding conventions:
 3. Use meaningful, human-readable names for variables, classes, etc.
 4. Avoid complex code blocks.  If required, carefully comment the code block
 
+Note: These instructions have been tested on a MacBookPro with
+
+* MacOSX Ventura v13.2.1,
+* Docker v20.10.23, build 7155243, and
+* VSCode v1.76.2 (Universal)
+* python v3.8.2
+
+Note: CODE_OF_CONDUCT.md requires :code:`[INSERT CONTACT METHOD]`
+
+## GitHub Worflow
+
+1. Open Issues within a Project
+2. Checkout an Issue branch to do the work
+3. Once PR is merged, delete the Issue branch from both local machine and GitHub
+
 ## Legal Notice
 
 When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.

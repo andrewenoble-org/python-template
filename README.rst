@@ -57,12 +57,18 @@ Usage
    `Docker Desktop <https://docs.docker.com/desktop/>`_ and
    `VSCode <https://code.visualstudio.com/download>`_.
 
+#. Check that :code:`git` and :code:`python` are installed on your local machine,
+   with :code:`python --version >= 3.8.2`
+
 #. Clone the repository to a folder with the same name as your repository
 
    .. code:: bash
 
       $ GITHUB_REPO_NAME=<your-respository-name>
+      $ mkdir $GITHUB_REPO_NAME
       $ git clone https://github.com/andrewenoble-org/python-template.git $GITHUB_REPO_NAME
+      $ cd $GITHUB_REPO_NAME
+      $ git init
 
 #. Edit :code:`assets/template/template.yml`, inserting your information
 
@@ -73,7 +79,9 @@ Usage
 #. Recommended GitHub repository configurations
 
 .. note::
-   This setup has only been tested on
-   MacOSX Ventura 13.2.1,
-   Docker version 20.10.23, build 7155243, and
-   VSCode 1.76.2 (Universal)
+   These instructions have been tested on a MacBookPro with
+   * MacOSX Ventura v13.2.1,
+   * Docker v20.10.23, build 7155243, and
+   * VSCode v1.76.2 (Universal)
+   * python v3.8.2
+   * git v2.30.2

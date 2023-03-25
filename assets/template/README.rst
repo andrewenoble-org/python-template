@@ -1,6 +1,6 @@
-#########
-REPO_NAME
-#########
+#############################
+GITHUB_REPO_DESCRIPTION_SHORT
+#############################
 
 .. image:: https://img.shields.io/badge/doc-latest-blue.svg
    :target: https://andrewenoble-org.github.io/python-template/
@@ -53,9 +53,3 @@ Installation
 .. code:: bash
 
    $ python -m pip install 'python-template @ git+https://github.com/andrewenoble-org/python-template'
-
-.. note::
-   This setup has only been tested on
-   MacOSX Ventura 13.2.1,
-   Docker version 20.10.23, build 7155243, and
-   VSCode 1.76.2 (Universal)
