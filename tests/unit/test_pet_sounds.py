@@ -1,5 +1,6 @@
 from contextlib import redirect_stdout
 from io import StringIO
+
 from pytest import raises
 
 from python_template.pet_sounds import PetSounds
@@ -22,7 +23,6 @@ def test_pet_sounds():
 
 
 def test_pet_sounds_raises():
-
     with raises(NotImplementedError, match="Silent pets are not supported!"):
         PetSounds("cat", None).says()
 
