@@ -25,12 +25,13 @@ jobs:
           DRY_RUN: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: false
-      - name: Find and Replace
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "version = \".*\""
-          replace: "version = \"${{ steps.bump.outputs.tag }}\""
-          include: "pyproject.toml"
+      - name: Find and replace version in pyproject.toml and conf.py
+        run: |
+          echo ${{ steps.bump.outputs.tag }}
+          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" pyproject.toml
+          sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" conf.py
+          git add .
+          git commit -m ${{ steps.bump.outputs.tag }}
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
