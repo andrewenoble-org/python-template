@@ -24,17 +24,17 @@ Python Template
 
 |
 
-.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
-   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
-   :alt: Tests
-
 .. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/merge_pages.yml/badge.svg
-   :alt: Docs
+   :alt: Merge Pages
 
 .. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
    :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_lint.yml/badge.svg
-   :alt: Lint
+   :alt: PR List
+
+.. image:: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
+   :target: https://github.com/andrewenoble-org/python-template/actions/workflows/pr_test.yml/badge.svg
+   :alt: PR Test
 
 ========
 Overview
