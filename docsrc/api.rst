@@ -8,5 +8,5 @@ API
 utils
 =====
 
-.. autoclass:: utils.yaml_handler.YAMLHandler
-.. autoclass:: utils.logger.Logger
+.. autoclass:: python_template.utils.yaml_handler.YAMLHandler
+.. autoclass:: python_template.utils.logger.Logger
