@@ -1,5 +1,5 @@
 ---
-# See https://github.com/mathieudutour/github-tag-action
+# See https://github.com/anothrNick/github-tag-action
 name: merge-release
 
 on:

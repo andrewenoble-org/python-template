@@ -1,5 +1,8 @@
 ---
-# See https://github.com/mathieudutour/github-tag-action
+# See
+# https://github.com/anothrNick/github-tag-action with DRY_RUN: true
+# and
+# https://github.com/EndBug/add-and-commit
 name: pr-release
 
 on:
@@ -33,4 +36,5 @@ jobs:
           sed -i "s/version = \".*\"/version = \"${{ steps.bump.outputs.tag }}\"/g" ./docsrc/conf.py
       - uses: EndBug/add-and-commit@v9
         with:
+          # Use new tag string as commit message
           message: ${{ steps.bump.outputs.tag }}
