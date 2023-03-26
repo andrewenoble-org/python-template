@@ -186,20 +186,37 @@ rename(
 filepath = "docsrc/index.rst"
 ####################################################
 
+# Replace docsrc/index.rst with assets/template/index.rst
+# and add custom values
+copyfile("assets/template/index.rst", filepath)
+
 # read text
 with open(filepath) as f:
     text = f.read()
 
 # replace
-text = text.replace(
-    orig_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
-    custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
-).replace(
-    "#" * len(orig_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
-    "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
+text = (
+    text.replace(
+        "GITHUB_REPO_DESCRIPTION",
+        custom_dict["GITHUB_REPO_DESCRIPTION"],
+    )
+    .replace(
+        "GITHUB_REPO_DESCRIPTION_SHORT",
+        custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
+    )
+    .replace(
+        "#" * len("GITHUB_REPO_DESCRIPTION_SHORT"),
+        "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
+    )
+    .replace(
+        orig_dict["GITHUB_ORG_NAME"],
+        custom_dict["GITHUB_ORG_NAME"],
+    )
+    .replace(
+        orig_dict["GITHUB_REPO_NAME"],
+        custom_dict["GITHUB_REPO_NAME"],
+    )
 )
-
-text = sub("version = .*", 'version = "0.0.0"', text)
 
 # write
 with open(filepath, "w") as f:
