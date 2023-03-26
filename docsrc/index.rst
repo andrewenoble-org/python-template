@@ -58,8 +58,8 @@ code for :code:`pip`-installable packages with :code:`Docker`-ized
 * GitHub :code:`main` branch protection rules
 * GitHub Issue and Pull-request templates
 * Opening GitHub Issues within :code:`GitHub Projects` and automatically
-  closing them with a Pull-Request
-* :code:`GitHub Actions` for testing and super-linting Pull-Requests as well as tagging
+  closing them with a Pull Request
+* :code:`GitHub Actions` for testing and super-linting Pull Requests as well as tagging
   releases and updating :code:`GitHub Pages` with each merge to :code:`main`
 
 See :code:`.github/CONTRIBUTING.md` for details on the recommended development
