@@ -153,16 +153,16 @@ dirname_list = ["tests", orig_src_name]
 # loop
 for dirname in dirname_list:
     # get a generator of all python-script PosixPaths in the directory
-    path_generator = Path(dirname).glob("**/*.py")
+    posixpath_generator = Path(dirname).glob("**/*.py")
 
     # iterate over python script paths
-    for filepath in path_generator:
+    for posixpath in posixpath_generator:
         # skip empty init files
-        if "__init__.py" in str(filepath):
+        if "__init__.py" in str(posixpath):
             continue
 
         # read text
-        with open(filepath) as f:
+        with open(posixpath) as f:
             text = f.read()
 
         # replace
@@ -172,7 +172,7 @@ for dirname in dirname_list:
         )
 
         # write
-        with open(filepath, "w") as f:
+        with open(posixpath, "w") as f:
             f.write(text)
 
 # rename source code directory
