@@ -48,6 +48,7 @@ An opinionated Python Template GitHub repository enabling fast setup of boilerpl
 code for :code:`pip`-installable packages with :code:`Docker`-ized
 :code:`VSCode` development environments supporting
 
+* :code:`Makefile` automating common development environment :code:`bash` commands
 * :code:`pre-commit` hooks, including :code:`black` :code:`isort`
 * :code:`pytest` coverage tracking
 * Capturing all logging output in a single file, :code:`logs/logs.txt` by default
