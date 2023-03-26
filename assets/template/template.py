@@ -176,8 +176,6 @@ for dirname in dirname_list:
             f.write(text)
 
 # rename source code directory
-print(orig_src_name)
-print(custom_src_name)
 rename(
     orig_src_name,
     custom_src_name,

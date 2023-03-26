@@ -44,10 +44,28 @@ Python Template
 Overview
 ========
 
-A Python Template GitHub repository.
+An opinionated Python Template GitHub repository enabling fast setup of boilerplate
+code for :code:`pip`-installable packages with :code:`Docker`-ized
+:code:`VSCode` development environments supporting
+
+* :code:`pre-commit` hooks, including :code:`black` :code:`isort`
+* :code:`pytest` coverage tracking
+* Capturing all logging output in a single file, :code:`logs/logs.txt` by default
+* :code:`jupyter` notebooks accessible either within a browser or within :code:`VSCode`
+* Sphinx :code:`numpydoc` documentation deployed to :code:`GitHub Pages`
+* README :code:`badges/shields`
+* GitHub :code:`main` branch protection rules
+* GitHub Issue and Pull-request templates
+* Opening GitHub Issues within :code:`GitHub Projects` for tracking and automatically
+  closing them with a Pull-Request
+* :code:`GitHub Actions` for testing and super-linting Pull-Requests as well as tagging
+  releases and updating :code:`GitHub Pages` with each merge to :code:`main`
+
+See :code:`.github/CONTRIBUTING.md` for details on the recommended development
+environmnt and GitHub configuration/workflow
 
 .. note::
-   This template repository is not intended to be :code:`pip` installable.
+   This repository (the template) is not intended to be :code:`pip`-installable
 
 =====
 Usage
@@ -55,12 +73,14 @@ Usage
 
 #. Install and launch
    `Docker Desktop <https://docs.docker.com/desktop/>`_ and
-   `VSCode <https://code.visualstudio.com/download>`_.
+   `VSCode <https://code.visualstudio.com/download>`_
 
 #. Check that :code:`git` and :code:`python` are installed on your local machine,
-   with :code:`python --version >= 3.8.2`
+   with :code:`python --version >= 3.8`.  You may also need to
+   :code:`pip install pyyaml`
 
-#. Clone the repository to a folder with the same name as your repository
+#. Within your working directory, clone the repository to a folder with the same name
+   as your repository and configure
 
    .. code:: bash
 
@@ -68,18 +88,24 @@ Usage
       $ mkdir $GITHUB_REPO_NAME
       $ git clone https://github.com/andrewenoble-org/python-template.git $GITHUB_REPO_NAME
       $ cd $GITHUB_REPO_NAME
-      $ git init
+      $ export PYTHONPATH=".:`pwd`"
 
-#. Edit :code:`assets/template/template.yml`, inserting your information
+#. Edit :code:`assets/template/template_custom.yml`, replacing the 7 placeholder values with
+   the correct information for your repository
 
-#. Run script to create your respository from the template
+#. Run the template script to create your respository.  Note that this script will
+   self-destruct (the final line deletes the :code:`assets/template` directory)
 
-#. Make your initial commit and push to GitHub
+   .. code:: bash
 
-#. Recommended GitHub repository configurations
+      $ python assets/template/template.py
+
+#. Your repository is ready for development! See :code:`.github/CONTRIBUTING.md` for
+   the recommended development environment
 
 .. note::
    These instructions have been tested on a MacBookPro with
+
    * MacOSX Ventura v13.2.1,
    * Docker v20.10.23, build 7155243, and
    * VSCode v1.76.2 (Universal)
