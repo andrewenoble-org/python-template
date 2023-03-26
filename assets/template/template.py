@@ -18,9 +18,9 @@ orig_src_name = orig_dict["GITHUB_REPO_NAME"].replace("-", "_")
 custom_src_name = custom_dict["GITHUB_REPO_NAME"].replace("-", "_")
 
 
-####################################################
+#######################################################################################
 filename = "README.rst"
-####################################################
+#######################################################################################
 
 # Replace README.rst with assets/template/README.rst
 # and add custom values
@@ -33,16 +33,16 @@ with open(filename) as f:
 # replace
 text = (
     text.replace(
-        "GITHUB_REPO_DESCRIPTION",
-        custom_dict["GITHUB_REPO_DESCRIPTION"],
-    )
-    .replace(
         "GITHUB_REPO_DESCRIPTION_SHORT",
         custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
     )
     .replace(
         "#" * len("GITHUB_REPO_DESCRIPTION_SHORT"),
         "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
+    )
+    .replace(
+        "GITHUB_REPO_DESCRIPTION",
+        custom_dict["GITHUB_REPO_DESCRIPTION"],
     )
     .replace(
         orig_dict["GITHUB_ORG_NAME"],
@@ -59,9 +59,9 @@ with open(filename, "w") as f:
     f.write(text)
 
 
-####################################################
+#######################################################################################
 filename = "pyproject.toml"
-####################################################
+#######################################################################################
 
 # read text
 with open(filename) as f:
@@ -102,9 +102,9 @@ with open(filename, "w") as f:
     f.write(text)
 
 
-####################################################
+#######################################################################################
 filename = "Makefile"
-####################################################
+#######################################################################################
 
 # read text
 with open(filename) as f:
@@ -121,9 +121,9 @@ with open(filename, "w") as f:
     f.write(text)
 
 
-####################################################
+#######################################################################################
 filename = "LICENSE.txt"
-####################################################
+#######################################################################################
 
 # read text
 with open(filename) as f:
@@ -143,9 +143,9 @@ with open(filename, "w") as f:
     f.write(text)
 
 
-######################################################
+#######################################################################################
 # Loop over all files in src code and test directories
-######################################################
+#######################################################################################
 
 # create a list of the src code and test directory names
 dirname_list = ["tests", orig_src_name]
@@ -182,9 +182,9 @@ rename(
 )
 
 
-####################################################
+#######################################################################################
 filepath = "docsrc/index.rst"
-####################################################
+#######################################################################################
 
 # Replace docsrc/index.rst with assets/template/index.rst
 # and add custom values
@@ -197,16 +197,16 @@ with open(filepath) as f:
 # replace
 text = (
     text.replace(
-        "GITHUB_REPO_DESCRIPTION",
-        custom_dict["GITHUB_REPO_DESCRIPTION"],
-    )
-    .replace(
         "GITHUB_REPO_DESCRIPTION_SHORT",
         custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
     )
     .replace(
         "#" * len("GITHUB_REPO_DESCRIPTION_SHORT"),
         "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
+    )
+    .replace(
+        "GITHUB_REPO_DESCRIPTION",
+        custom_dict["GITHUB_REPO_DESCRIPTION"],
     )
     .replace(
         orig_dict["GITHUB_ORG_NAME"],
@@ -223,9 +223,9 @@ with open(filepath, "w") as f:
     f.write(text)
 
 
-####################################################
+#######################################################################################
 filepath = "docsrc/conf.py"
-####################################################
+#######################################################################################
 
 # read text
 with open(filepath) as f:
@@ -244,9 +244,9 @@ with open(filepath, "w") as f:
     f.write(text)
 
 
-####################################################
+#######################################################################################
 filepath = "docsrc/api.rst"
-####################################################
+#######################################################################################
 
 # read text
 with open(filepath) as f:
@@ -263,9 +263,9 @@ with open(filepath, "w") as f:
     f.write(text)
 
 
-####################################################
+#######################################################################################
 filepath = ".github/CONTRIBUTING.md"
-####################################################
+#######################################################################################
 
 # read text
 with open(filepath) as f:
@@ -292,8 +292,8 @@ with open(filepath, "w") as f:
     f.write(text)
 
 
-######################################################
+#######################################################################################
 # Remove assests/template folder
-######################################################
+#######################################################################################
 
 rmtree("assets/template")
