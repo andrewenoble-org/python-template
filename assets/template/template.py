@@ -19,44 +19,49 @@ custom_src_name = custom_dict["GITHUB_REPO_NAME"].replace("-", "_")
 
 
 #######################################################################################
-filename = "README.rst"
+# Loop over the two documentation files,
+# which are identical except for the docsrc/index.rst Table of Contents section
+# (where no replacements are needed)
 #######################################################################################
 
-# Replace README.rst with assets/template/README.rst
-# and add custom values
-copyfile("assets/template/README.rst", filename)
+# create a list of the two documentation filepaths
+filepath_list = ["docsrc/index.rst", "./README.rst"]
 
-# read text
-with open(filename) as f:
-    text = f.read()
+for filepath in filepath_list:
+    # Replace filepath .* with assets/template/.*
+    copyfile("assets/template/README.rst", filepath)
 
-# replace
-text = (
-    text.replace(
-        "GITHUB_REPO_DESCRIPTION_SHORT",
-        custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
-    )
-    .replace(
-        "#" * len("GITHUB_REPO_DESCRIPTION_SHORT"),
-        "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
-    )
-    .replace(
-        "GITHUB_REPO_DESCRIPTION",
-        custom_dict["GITHUB_REPO_DESCRIPTION"],
-    )
-    .replace(
-        orig_dict["GITHUB_ORG_NAME"],
-        custom_dict["GITHUB_ORG_NAME"],
-    )
-    .replace(
-        orig_dict["GITHUB_REPO_NAME"],
-        custom_dict["GITHUB_REPO_NAME"],
-    )
-)
+    # read text
+    with open(filepath) as f:
+        text = f.read()
 
-# write
-with open(filename, "w") as f:
-    f.write(text)
+    # replace
+    text = (
+        text.replace(
+            "GITHUB_REPO_DESCRIPTION_SHORT",
+            custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
+        )
+        .replace(
+            "#" * len("GITHUB_REPO_DESCRIPTION_SHORT"),
+            "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
+        )
+        .replace(
+            "GITHUB_REPO_DESCRIPTION",
+            custom_dict["GITHUB_REPO_DESCRIPTION"],
+        )
+        .replace(
+            orig_dict["GITHUB_ORG_NAME"],
+            custom_dict["GITHUB_ORG_NAME"],
+        )
+        .replace(
+            orig_dict["GITHUB_REPO_NAME"],
+            custom_dict["GITHUB_REPO_NAME"],
+        )
+    )
+
+    # write
+    with open(filepath, "w") as f:
+        f.write(text)
 
 
 #######################################################################################
@@ -180,47 +185,6 @@ rename(
     orig_src_name,
     custom_src_name,
 )
-
-
-#######################################################################################
-filepath = "docsrc/index.rst"
-#######################################################################################
-
-# Replace docsrc/index.rst with assets/template/index.rst
-# and add custom values
-copyfile("assets/template/index.rst", filepath)
-
-# read text
-with open(filepath) as f:
-    text = f.read()
-
-# replace
-text = (
-    text.replace(
-        "GITHUB_REPO_DESCRIPTION_SHORT",
-        custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"],
-    )
-    .replace(
-        "#" * len("GITHUB_REPO_DESCRIPTION_SHORT"),
-        "#" * len(custom_dict["GITHUB_REPO_DESCRIPTION_SHORT"]),
-    )
-    .replace(
-        "GITHUB_REPO_DESCRIPTION",
-        custom_dict["GITHUB_REPO_DESCRIPTION"],
-    )
-    .replace(
-        orig_dict["GITHUB_ORG_NAME"],
-        custom_dict["GITHUB_ORG_NAME"],
-    )
-    .replace(
-        orig_dict["GITHUB_REPO_NAME"],
-        custom_dict["GITHUB_REPO_NAME"],
-    )
-)
-
-# write
-with open(filepath, "w") as f:
-    f.write(text)
 
 
 #######################################################################################
