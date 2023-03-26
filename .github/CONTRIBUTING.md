@@ -15,7 +15,7 @@ This project and everyone participating in it is governed by a standard
 [Code of Conduct](https://github.com/andrewenoble-org/python-template/main/.github/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable
 behavior to
-[andrewenoble@gmail.com](andrewenoble@gmail.com).
+[andrew.e.noble@gmail.com](andrew.e.noble@gmail.com).
 
 ## Asking a Question
 
