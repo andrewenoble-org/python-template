@@ -49,15 +49,15 @@ code for :code:`pip`-installable packages with :code:`Docker`-ized
 :code:`VSCode` development environments supporting
 
 * :code:`Makefile` automating common development environment :code:`bash` commands
-* :code:`pre-commit` hooks, including :code:`black` :code:`isort`
-* :code:`pytest` coverage tracking
+* :code:`pre-commit` hooks, including :code:`black` and :code:`isort`
+* :code:`pytest` :code:`coverage` tracking
 * Capturing all logging output in a single file, :code:`logs/logs.txt` by default
 * :code:`jupyter` notebooks accessible either within a browser or within :code:`VSCode`
 * Sphinx :code:`numpydoc` documentation deployed to :code:`GitHub Pages`
 * README :code:`badges/shields`
 * GitHub :code:`main` branch protection rules
 * GitHub Issue and Pull-request templates
-* Opening GitHub Issues within :code:`GitHub Projects` for tracking and automatically
+* Opening GitHub Issues within :code:`GitHub Projects` and automatically
   closing them with a Pull-Request
 * :code:`GitHub Actions` for testing and super-linting Pull-Requests as well as tagging
   releases and updating :code:`GitHub Pages` with each merge to :code:`main`
