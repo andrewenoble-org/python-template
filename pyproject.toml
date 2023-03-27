@@ -1,6 +1,6 @@
 [project]
 name = "python-template"
-version = "0.0.3"
+version = "0.0.4"
 license = "MIT"
 authors = [
     {name = "Andrew Noble", email = "andrew.e.noble@gmail.com"},
@@ -18,7 +18,7 @@ dependencies = []
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-# Dev environment dependencies
+# Development Environment dependencies
 [project.optional-dependencies]
 dev = [
     "numpydoc",

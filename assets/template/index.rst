@@ -53,3 +53,12 @@ Installation
 .. code:: bash
 
    $ python -m pip install 'python-template @ git+https://github.com/andrewenoble-org/python-template'
+
+=================
+Table of Contents
+=================
+
+.. toctree::
+   :maxdepth: 1
+
+   api

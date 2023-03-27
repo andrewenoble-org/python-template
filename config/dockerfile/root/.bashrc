@@ -12,7 +12,8 @@ alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 
-# Some more alias to avoid making mistakes:
-# alias rm='rm -i'
-# alias cp='cp -i'
-# alias mv='mv -i'
+# Function to automate git config of email and username
+function git-config() {
+    git config --global user.email "andrew.e.noble@gmail.com"
+    git config --global user.name "Andrew Noble"
+}
