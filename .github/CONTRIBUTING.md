@@ -15,7 +15,7 @@ All types of contributions are welcome!
 ## Code of Conduct
 
 This project and everyone participating in it is governed by a standard
-[Code of Conduct](https://github.com/andrewenoble-org/python-template/main/.github/CODE_OF_CONDUCT.md).
+[Code of Conduct](https://github.com/andrewenoble-org/python-template/blob/main/.github/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable
 behavior to
 [andrew.e.noble@gmail.com](mailto:andrew.e.noble@gmail.com).
@@ -23,7 +23,7 @@ behavior to
 ## Asking a Question
 
 Please first check if current
-[GitHub Pages](https://andrewenoble-org.github.io/python-template/)
+[GitHub Pages documentation](https://andrewenoble-org.github.io/python-template/)
 or Issues linked to existing
 [GitHub Projects](https://github.com/andrewenoble-org/python-template/projects)
 address the question
@@ -42,17 +42,20 @@ make changes on a corresponding branch within your `VSCode` Development Environm
 and raise a GitHub Pull Request
 
 1. Check if current
-   [GitHub Pages](https://andrewenoble-org.github.io/python-template/)
+   [GitHub Pages documentation](https://andrewenoble-org.github.io/python-template/)
    or Issues linked to an existing
    [GitHub Project](https://github.com/andrewenoble-org/python-template/projects)
    are relevant to your bug report, feature request, or suggested enhancement
+
 2. Open a new
    [GitHub Issue](https://github.com/andrewenoble-org/python-template/issues/new)
    and carefully fill out the template with all requested information
+
 3. Once the Issue is open, select a relevant
    [GitHub Project](https://github.com/andrewenoble-org/python-template/projects),
    select "Add item" on a view within that project, search for your Issue by typing
-   `#python-template` in the text box, and then add the Issue.
+   `#python-template` in the text box, and then add the Issue
+
 4. Within your `VSCode` Development Environment (see setup below), start
    work on a development branch named for your specific Project and Issue
 
@@ -94,13 +97,17 @@ and raise a GitHub Pull Request
 
    Continue to push changes with `make git-push-f` until these Actions run without
    error.  Note that resolution of `Warnings`, though not required, is highly
-   encouraged in general.
+   encouraged in general
+
 8. Once all Pull-Request-triggered Actions run without error, carefully review the
    GitHub Pull-Request checklist and complete missing action-items
+
 9. Once all action-items are complete, request a review on GitHub.  At least one
    review by one `python-template` owner is required
+
 10. Once all conversation threads raised during review have been resolved, press
    `Squash and Merge` on GitHub to merge to `main`
+
 11. Once the Pull Request is merged, delete the Issue branch from both your `VSCode`
     Development Environment and GitHub
 
@@ -110,8 +117,11 @@ and raise a GitHub Pull Request
    [pre-commit](https://pre-commit.com/).  See
    [pre-commit config file](https://github.com/andrewenoble-org/python-template/blob/main/.pre-commit-config.yaml)
    for details
+
 2. Use [numpydoc](https://numpydoc.readthedocs.io/en/latest/index.html) docstring style
+
 3. Use meaningful, human-readable names for variables, classes, etc.
+
 4. Avoid complex code blocks.  If required, carefully comment the code block
 
 ## Development Environment
@@ -120,6 +130,7 @@ and raise a GitHub Pull Request
    [Docker Desktop](https://docs.docker.com/desktop/)
    and
    [VSCode](https://code.visualstudio.com/download)
+
 2. Clone the repository
 
    ```bash
@@ -140,6 +151,7 @@ and raise a GitHub Pull Request
 
 5. Navigate at the top of the `VSCode` window to the `/home/project` directory.  This
    is the containerized Development Environment working directory
+
 6. Configure `git` with your name and email using a `bash` function included in the
    containerized Development Environment
 
@@ -171,17 +183,17 @@ and raise a GitHub Pull Request
     rendered document previews,
     and Jupyter notebooks
 
-      * Better TOML
-      * HTML Preview
-      * Jupyter
-      * markdownlint
-      * reStructuredText
-      * reStructuredText Syntax highlighting
-      * Preview
-      * Python
-      * Pylance
-      * sqlfluff
-      * YAML
+      * [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml)
+      * [HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode)
+      * [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+      * [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+      * [reStructuredText](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext)
+      * [reStructuredText Syntax highlighting](https://marketplace.visualstudio.com/items?itemName=trond-snekvik.simple-rst)
+      * [Preview](https://marketplace.visualstudio.com/items?itemName=searKing.preview-vscode)
+      * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+      * [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+      * [sqlfluff](https://marketplace.visualstudio.com/items?itemName=dorzey.vscode-sqlfluff)
+      * [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 Note: This setup has been tested on a MacBookPro with
 
@@ -194,9 +206,11 @@ Note: This setup has been tested on a MacBookPro with
 
 1. The main branch has name `main` rather than `master` or `trunk`, and there is a
    `pages` branch for GitHub Actions deployment of GitHub Pages documenation
+
 2. Under Settings, `Environment` and `Pages` have been configured to enable
    `Build and deployment` of documentation with `GitHub Actions`.  See
-   [GitHub Pages docs](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+   [GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+
 3. Under Settings, `Branches` has been configured with
    * `Branch protection rule` enabled for `[mp][a]*[ie][ns]`
      `Branch pattern name`, applying the protection rule to branches `main` and `pages`
