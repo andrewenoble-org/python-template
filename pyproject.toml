@@ -1,6 +1,6 @@
 [project]
 name = "python-template"
-version = "0.0.4"
+version = "0.0.5"
 license = "MIT"
 authors = [
     {name = "Andrew Noble", email = "andrew.e.noble@gmail.com"},
