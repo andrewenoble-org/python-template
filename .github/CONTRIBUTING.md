@@ -49,18 +49,23 @@ and raise a GitHub Pull Request
 
 2. Open a new
    [GitHub Issue](https://github.com/andrewenoble-org/python-template/issues/new)
+   with name \<Issue-Short-Title\>
    and carefully fill out the template with all requested information
 
 3. Once the Issue is open, select a relevant
    [GitHub Project](https://github.com/andrewenoble-org/python-template/projects),
    select "Add item" on a view within that project, search for your Issue by typing
-   `#python-template` in the text box, and then add the Issue
+   `#python-template` in the text box, and then add the Issue.  This automatically
+   generates an `<item-number>` for the Issue in the Project.  Modify the Issue
+   title to `<PROJECT-ABBR>-<item-number>-<Issue-Short-Title>`,
+   where `<PROJECT-ABBR>` should be a 2-4 capitalized abbreviation of
+   the Project name
 
 4. Within your `VSCode` Development Environment (see setup below), start
    work on a development branch named for your specific Project and Issue
 
    ```bash
-   ISSUE_BRANCH_NAME=<project-short-description>-<issue-number>-<issue-short-title>
+   ISSUE_BRANCH_NAME=<PROJECT-ABBR>-<item-number>-<Issue-Short-Title>
    cd python-template
    git checkout -b $ISSUE_BRANCH_NAME
    git push -u origin $ISSUE_BRANCH_NAME
@@ -95,7 +100,7 @@ and raise a GitHub Pull Request
       * `pr-test`: runs `pytest` for python versions `3.9` and `3.10` and for operating
         systems `ubuntu-latest` and `macosx-latest`
 
-   Continue to push changes with `git-push-f M="<commit-message>"` until these Actions
+   Continue to push changes with `make git-push-f M="<commit-message>"` until these Actions
    run without error.  Note that resolution of `Warnings`, though not required, is
    highly encouraged in general
 
@@ -144,13 +149,18 @@ and raise a GitHub Pull Request
    make build && make run
    ```
 
+   Note: `make run` may fail if another Docker container is using the `8888` port on
+   the host machine.  If so, edit the Makefile, changing `8888:8888` to `8889:8888` or
+   similar.
+
 4. Open `VSCode`, install
    [Docker Extension](https://code.visualstudio.com/docs/containers/overview),
    and follow the `Docker Extension` instructions to Attach a `VSCode` Window to your
    Docker container
 
-5. Navigate at the top of the `VSCode` window to the `/home/project` directory.  This
-   is the containerized Development Environment working directory
+5. Click on the blue `Open Folder` button, and navigate at the top of the `VSCode`
+   window to the `/home/project` directory.  This is the containerized Development
+   Environment working directory
 
 6. Configure `git` with your name and email using a `bash` function included in the
    containerized Development Environment

@@ -228,35 +228,32 @@ with open(filepath, "w") as f:
 
 
 #######################################################################################
-# Loop over files requiring replacement of user name and email
+filepath = "config/dockerfile/root/.bashrc"
 #######################################################################################
 
-filepath_list = ["config/dockerfile/root/.bashrc", ".github/CONTRIBUTING.md"]
+# read text
+with open(filepath) as f:
+    text = f.read()
 
-for filepath in filepath_list:
-    # read text
-    with open(filepath) as f:
-        text = f.read()
-
-    # replace
-    text = (
-        text.replace(
-            orig_dict["OWNER_FIRST_NAME"],
-            custom_dict["OWNER_FIRST_NAME"],
-        )
-        .replace(
-            orig_dict["OWNER_LAST_NAME"],
-            custom_dict["OWNER_LAST_NAME"],
-        )
-        .replace(
-            orig_dict["OWNER_EMAIL"],
-            custom_dict["OWNER_EMAIL"],
-        )
+# replace
+text = (
+    text.replace(
+        orig_dict["OWNER_FIRST_NAME"],
+        custom_dict["OWNER_FIRST_NAME"],
     )
+    .replace(
+        orig_dict["OWNER_LAST_NAME"],
+        custom_dict["OWNER_LAST_NAME"],
+    )
+    .replace(
+        orig_dict["OWNER_EMAIL"],
+        custom_dict["OWNER_EMAIL"],
+    )
+)
 
-    # write
-    with open(filepath, "w") as f:
-        f.write(text)
+# write
+with open(filepath, "w") as f:
+    f.write(text)
 
 
 #######################################################################################
@@ -271,6 +268,35 @@ with open(filepath) as f:
 text = text.replace(
     orig_dict["OWNER_EMAIL"],
     custom_dict["OWNER_EMAIL"],
+)
+
+# write
+with open(filepath, "w") as f:
+    f.write(text)
+
+
+#######################################################################################
+filepath = ".github/CONTRIBUTING.md"
+#######################################################################################
+
+# read text
+with open(filepath) as f:
+    text = f.read()
+
+# replace
+text = (
+    text.replace(
+        orig_dict["GITHUB_REPO_NAME"],
+        custom_dict["GITHUB_REPO_NAME"],
+    )
+    .replace(
+        orig_dict["GITHUB_ORG_NAME"],
+        custom_dict["GITHUB_ORG_NAME"],
+    )
+    .replace(
+        orig_dict["OWNER_EMAIL"],
+        custom_dict["OWNER_EMAIL"],
+    )
 )
 
 # write
