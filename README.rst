@@ -63,7 +63,7 @@ code for :code:`pip`-installable packages with :code:`Docker`-ized
   releases and updating :code:`GitHub Pages` with each merge to :code:`main`
 
 See :code:`.github/CONTRIBUTING.md` for details on the recommended Development
-Environmnt and GitHub configuration/workflow
+Environment and GitHub configuration/workflow
 
 .. note::
    This repository (the template) is not intended to be :code:`pip`-installable
