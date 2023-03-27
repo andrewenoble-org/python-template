@@ -63,7 +63,7 @@ code for :code:`pip`-installable packages with :code:`Docker`-ized
   releases and updating :code:`GitHub Pages` with each merge to :code:`main`
 
 See :code:`.github/CONTRIBUTING.md` for details on the recommended Development
-Environmnt and GitHub configuration/workflow
+Environment and GitHub configuration/workflow
 
 .. note::
    This repository (the template) is not intended to be :code:`pip`-installable
@@ -77,7 +77,7 @@ Usage
    `VSCode <https://code.visualstudio.com/download>`_
 
 #. Check that :code:`git` and :code:`python` are installed on your local machine,
-   with :code:`python --version >= 3.8`.  You may also need to
+   with :code:`python --version` `3.9` or `3.10`.  You may also need to
    :code:`pip install pyyaml`
 
 #. Within your working directory, clone the repository to a directory with the same
@@ -107,8 +107,8 @@ Usage
 .. note::
    These instructions have been tested on a MacBookPro with
 
-   * MacOSX Ventura v13.2.1,
-   * Docker v20.10.23, build 7155243, and
+   * MacOSX Ventura v13.2.1
+   * Docker v20.10.23, build 7155243
    * VSCode v1.76.2 (Universal)
-   * python v3.8.2
-   * git v2.30.2
+   * python v3.9.16
+   * git v2.40.0

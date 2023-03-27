@@ -24,7 +24,7 @@ RUN rm requirements.txt
 ENV PYTHONPATH .:/home/project
 
 # configure bash
-COPY config/dockerfile/root/.bashrc /root/.bashrc
+COPY assets/dockerfile/root/.bashrc /root/.bashrc
 
 # enable jupyter access in browser
 ENTRYPOINT [ \

@@ -207,10 +207,11 @@ and raise a GitHub Pull Request
 
 Note: This setup has been tested on a MacBookPro with
 
-* MacOSX Ventura v13.2.1,
-* Docker v20.10.23, build 7155243, and
+* MacOSX Ventura v13.2.1
+* Docker v20.10.23, build 7155243
 * VSCode v1.76.2 (Universal)
-* python v3.8.2
+* python v3.9.16
+* git v2.40.0
 
 ## GitHub Configuration
 
