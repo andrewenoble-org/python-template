@@ -83,7 +83,7 @@ and raise a GitHub Pull Request
    with a push from your `VSCode` Development Environment
 
    ```bash
-   make test && make git-push-f
+   make test && make git-push-f M="<commit-message>"
    ```
 
 7. Pull Requests trigger
@@ -95,9 +95,9 @@ and raise a GitHub Pull Request
       * `pr-test`: runs `pytest` for python versions `3.9` and `3.10` and for operating
         systems `ubuntu-latest` and `macosx-latest`
 
-   Continue to push changes with `make git-push-f` until these Actions run without
-   error.  Note that resolution of `Warnings`, though not required, is highly
-   encouraged in general
+   Continue to push changes with `git-push-f M="<commit-message>"` until these Actions
+   run without error.  Note that resolution of `Warnings`, though not required, is
+   highly encouraged in general
 
 8. Once all Pull-Request-triggered Actions run without error, carefully review the
    GitHub Pull-Request checklist and complete missing action-items
