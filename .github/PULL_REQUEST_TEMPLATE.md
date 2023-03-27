@@ -2,7 +2,7 @@
 
 ## Ticket
 
-Fixes [`<PROJECT-ABBR>-<item-number>-<Issue-Short-Title>`](<issue-link>)
+Closes [`<PROJECT-ABBR>-<item-number>-<Issue-Short-Title>`](<issue-link>)
 
 ## Description
 
