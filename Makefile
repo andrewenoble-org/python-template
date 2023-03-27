@@ -8,8 +8,6 @@ help:
 	@echo ""
 	@echo "  exec        launch a shell in a running docker container"
 	@echo ""
-	@echo "  git-config  configure git with dummy user email and name"
-	@echo ""
 	@echo "  git-push-f  commit and force push with message M=\"...\""
 	@echo ""
 	@echo "  git-undo-d  undo deletion (not yet committed) of one or more files"
@@ -33,11 +31,6 @@ build:
 .PHONY: exec
 exec:
 	docker exec -it python-template /bin/bash
-
-.PHONY: git-config
-git-config:
-	git config --global user.email "a@b"
-	git config --global user.name "a"
 
 .PHONY: git-push-f
 git-push-f:

@@ -58,9 +58,9 @@ make changes on a corresponding Issue branch within your local
    work on a development branch named for your specific Project and Issue
 
    ```bash
-   \$ cd python-template
-   \$ git checkout -b <project-short-description>-<issue-number>-<issue-short-title>
-   \$ git push -u origin <project-short-description>-<issue-number>-<issue-short-title>
+   cd python-template
+   git checkout -b <project-short-description>-<issue-number>-<issue-short-title>
+   git push -u origin <project-short-description>-<issue-number>-<issue-short-title>
    ```
 
 5. As you make changes, follow the [Coding Conventions](#coding-conventions) listed
@@ -121,14 +121,14 @@ make changes on a corresponding Issue branch within your local
 2. Clone the repository
 
    ```bash
-   \$ git clone https://github.com/andrewenoble-org/python-template.git
+   git clone https://github.com/andrewenoble-org/python-template.git
    ```
 
 3. Within the respository, build a Development Environment `Docker` image, deploy a
    Development Environment `Docker` container
 
    ```bash
-   \$ make build && make run
+   make build && make run
    ```
 
 4. Open `VSCode`, install
@@ -138,31 +138,31 @@ make changes on a corresponding Issue branch within your local
 
 5. Navigate at the top of the `VSCode` window to the `/home/project`.  This is the
    containerized Development Environment working directory
-6. Setup a fake configuration for `git`, to avoid `git` CLI errors, by running in the
-   `VSCode` terminal
+6. Configure `git` with your name and email using a `bash` function included in the
+   containerized Development Environment
 
    ```bash
-   \$ make git-config
+   git-config
    ```
 
 7. Install [pre-commit](https://pre-commit.com/) in your Development Environment
    container to activate hooks
 
    ```bash
-   \$ pre-commit install
+   pre-commit install
    ```
 
 8. Check that your local Development Environment passes all `pre-commit` checks with
 
    ```bash
-   \$ pre-commit run --all
+   pre-commit run --all
    ```
 
 9. Check that all tests pass with good coverage in your local Development Environment
    with
 
    ```bash
-   \$ make test
+   make test
    ```
 
 10. Install additional `VSCode Extensions` to enable, within a single `VSCode` Window,
