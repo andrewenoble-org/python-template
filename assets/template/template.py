@@ -279,7 +279,7 @@ with open(filepath, "w") as f:
 
 
 #######################################################################################
-# Remove assests/template folder
+# Remove assests/template directory
 #######################################################################################
 
 rmtree("assets/template")

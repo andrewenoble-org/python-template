@@ -46,9 +46,9 @@ Overview
 
 An opinionated Python Template GitHub repository enabling fast setup of boilerplate
 code for :code:`pip`-installable packages with :code:`Docker`-ized
-:code:`VSCode` development environments supporting
+:code:`VSCode` Development Environments supporting
 
-* :code:`Makefile` automating common development environment :code:`bash` commands
+* :code:`Makefile` automating common Development Environment :code:`bash` commands
 * :code:`pre-commit` hooks, including :code:`black` and :code:`isort`
 * :code:`pytest` :code:`coverage` tracking
 * Capturing all logging output in a single file, :code:`logs/logs.txt` by default
@@ -62,8 +62,8 @@ code for :code:`pip`-installable packages with :code:`Docker`-ized
 * :code:`GitHub Actions` for testing and super-linting Pull Requests as well as tagging
   releases and updating :code:`GitHub Pages` with each merge to :code:`main`
 
-See :code:`.github/CONTRIBUTING.md` for details on the recommended development
-environmnt and GitHub configuration/workflow
+See :code:`.github/CONTRIBUTING.md` for details on the recommended Development
+Environmnt and GitHub configuration/workflow
 
 .. note::
    This repository (the template) is not intended to be :code:`pip`-installable
@@ -80,8 +80,8 @@ Usage
    with :code:`python --version >= 3.8`.  You may also need to
    :code:`pip install pyyaml`
 
-#. Within your working directory, clone the repository to a folder with the same name
-   as your repository and configure
+#. Within your working directory, clone the repository to a directory with the same
+   name as your repository and configure
 
    .. code:: bash
 
@@ -102,7 +102,7 @@ Usage
       $ python assets/template/template.py
 
 #. Your repository is ready for development! See :code:`.github/CONTRIBUTING.md` for
-   the recommended development environment
+   the recommended Development Environment
 
 .. note::
    These instructions have been tested on a MacBookPro with

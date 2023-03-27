@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# remove old docs folder if it exists
+# remove old docs directory if it exists
 rm -rfd docs && mkdir docs
 
-# create new docs folder
+# create new docs directory
 sphinx-build docsrc docs

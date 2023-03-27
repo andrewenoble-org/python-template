@@ -18,7 +18,7 @@ dependencies = []
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-# Dev environment dependencies
+# Development Environment dependencies
 [project.optional-dependencies]
 dev = [
     "numpydoc",
