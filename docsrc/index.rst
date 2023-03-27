@@ -88,8 +88,8 @@ Usage
    * MacOSX Ventura v13.2.1,
    * Docker v20.10.23, build 7155243, and
    * VSCode v1.76.2 (Universal)
-   * python v3.8.2
-   * git v2.30.2
+   * python v3.9.16
+   * git v2.40.0
 
 =================
 Table of Contents

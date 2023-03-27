@@ -17,3 +17,10 @@ function git-config() {
     git config --global user.email "andrew.e.noble@gmail.com"
     git config --global user.name "Andrew Noble"
 }
+
+# Makefile target code completion
+# Credit:
+# Cibin Joseph
+# 2016-07-16
+# https://stackoverflow.com/questions/4188324/bash-completion-of-makefile-target
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
