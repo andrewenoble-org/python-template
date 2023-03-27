@@ -228,7 +228,7 @@ with open(filepath, "w") as f:
 
 
 #######################################################################################
-filepath = "config/dockerfile/root/.bashrc"
+filepath = "assets/dockerfile/root/.bashrc"
 #######################################################################################
 
 # read text
