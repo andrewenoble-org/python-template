@@ -66,7 +66,6 @@ and raise a GitHub Pull Request
 
    ```bash
    ISSUE_BRANCH_NAME=<PROJECT-ABBR>-<item-number>-<Issue-Short-Title>
-   cd python-template
    git checkout -b $ISSUE_BRANCH_NAME
    git push -u origin $ISSUE_BRANCH_NAME
    ```
