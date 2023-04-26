@@ -77,7 +77,7 @@ Usage
    `VSCode <https://code.visualstudio.com/download>`_
 
 #. Check that :code:`git` and :code:`python` are installed on your local machine,
-   with :code:`python --version` `3.9` or `3.10`.  You may also need to
+   with :code:`python --version 3.9` or :code:`3.10`.  You may also need to
    :code:`pip install pyyaml`
 
 #. Within your working directory, clone the repository to a directory with the same

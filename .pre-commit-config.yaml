@@ -35,13 +35,13 @@ repos:
           - id: sqlfluff-lint
           - id: sqlfluff-fix
 
-    - repo: https://gitlab.com/iamlikeme/nbhooks
-      rev: 1.0.0
+    - repo: https://github.com/srstevenson/nb-clean
+      rev: 2.4.0
       hooks:
-          - id: nb-ensure-clean
+          - id: nb-clean
 
     - repo: https://github.com/PyCQA/docformatter
-      rev: v1.6.0-rc7
+      rev: v1.6.4
       hooks:
           - id: docformatter
             args: [--in-place, --wrap-summaries=88, --wrap-descriptions=88]
